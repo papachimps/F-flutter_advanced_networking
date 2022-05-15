@@ -20,8 +20,8 @@ MarvelComic _$MarvelComicFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$MarvelComic {
-  @JsonKey(name: 'id')
-  int get id => throw _privateConstructorUsedError;
+  @IntToStringConverter()
+  String get id => throw _privateConstructorUsedError;
   @JsonKey(name: 'digitalId')
   int? get digitalId => throw _privateConstructorUsedError;
   @JsonKey(name: 'title')
@@ -47,8 +47,8 @@ abstract class $MarvelComicCopyWith<$Res> {
           MarvelComic value, $Res Function(MarvelComic) then) =
       _$MarvelComicCopyWithImpl<$Res>;
   $Res call(
-      {@JsonKey(name: 'id')
-          int id,
+      {@IntToStringConverter()
+          String id,
       @JsonKey(name: 'digitalId')
           int? digitalId,
       @JsonKey(name: 'title')
@@ -87,7 +87,7 @@ class _$MarvelComicCopyWithImpl<$Res> implements $MarvelComicCopyWith<$Res> {
       id: id == freezed
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as int,
+              as String,
       digitalId: digitalId == freezed
           ? _value.digitalId
           : digitalId // ignore: cast_nullable_to_non_nullable
@@ -135,8 +135,8 @@ abstract class _$$_MarvelComicCopyWith<$Res>
       __$$_MarvelComicCopyWithImpl<$Res>;
   @override
   $Res call(
-      {@JsonKey(name: 'id')
-          int id,
+      {@IntToStringConverter()
+          String id,
       @JsonKey(name: 'digitalId')
           int? digitalId,
       @JsonKey(name: 'title')
@@ -178,7 +178,7 @@ class __$$_MarvelComicCopyWithImpl<$Res> extends _$MarvelComicCopyWithImpl<$Res>
       id: id == freezed
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as int,
+              as String,
       digitalId: digitalId == freezed
           ? _value.digitalId
           : digitalId // ignore: cast_nullable_to_non_nullable
@@ -211,7 +211,7 @@ class __$$_MarvelComicCopyWithImpl<$Res> extends _$MarvelComicCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_MarvelComic implements _MarvelComic {
   const _$_MarvelComic(
-      {@JsonKey(name: 'id')
+      {@IntToStringConverter()
           required this.id,
       @JsonKey(name: 'digitalId')
           this.digitalId,
@@ -231,8 +231,8 @@ class _$_MarvelComic implements _MarvelComic {
       _$$_MarvelComicFromJson(json);
 
   @override
-  @JsonKey(name: 'id')
-  final int id;
+  @IntToStringConverter()
+  final String id;
   @override
   @JsonKey(name: 'digitalId')
   final int? digitalId;
@@ -300,8 +300,8 @@ class _$_MarvelComic implements _MarvelComic {
 
 abstract class _MarvelComic implements MarvelComic {
   const factory _MarvelComic(
-      {@JsonKey(name: 'id')
-          required final int id,
+      {@IntToStringConverter()
+          required final String id,
       @JsonKey(name: 'digitalId')
           final int? digitalId,
       @JsonKey(name: 'title')
@@ -319,8 +319,8 @@ abstract class _MarvelComic implements MarvelComic {
       _$_MarvelComic.fromJson;
 
   @override
-  @JsonKey(name: 'id')
-  int get id => throw _privateConstructorUsedError;
+  @IntToStringConverter()
+  String get id => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'digitalId')
   int? get digitalId => throw _privateConstructorUsedError;
