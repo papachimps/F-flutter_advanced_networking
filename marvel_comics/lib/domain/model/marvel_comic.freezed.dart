@@ -23,7 +23,8 @@ mixin _$MarvelComic {
   @IntToStringConverter()
   String get id => throw _privateConstructorUsedError;
   @JsonKey(name: 'digitalId')
-  int? get digitalId => throw _privateConstructorUsedError;
+  @NullableIntToNullableStringConverter()
+  String? get digitalId => throw _privateConstructorUsedError;
   @JsonKey(name: 'title')
   String? get title => throw _privateConstructorUsedError;
   @JsonKey(name: 'modified')
@@ -50,7 +51,8 @@ abstract class $MarvelComicCopyWith<$Res> {
       {@IntToStringConverter()
           String id,
       @JsonKey(name: 'digitalId')
-          int? digitalId,
+      @NullableIntToNullableStringConverter()
+          String? digitalId,
       @JsonKey(name: 'title')
           String? title,
       @JsonKey(name: 'modified')
@@ -91,7 +93,7 @@ class _$MarvelComicCopyWithImpl<$Res> implements $MarvelComicCopyWith<$Res> {
       digitalId: digitalId == freezed
           ? _value.digitalId
           : digitalId // ignore: cast_nullable_to_non_nullable
-              as int?,
+              as String?,
       title: title == freezed
           ? _value.title
           : title // ignore: cast_nullable_to_non_nullable
@@ -138,7 +140,8 @@ abstract class _$$_MarvelComicCopyWith<$Res>
       {@IntToStringConverter()
           String id,
       @JsonKey(name: 'digitalId')
-          int? digitalId,
+      @NullableIntToNullableStringConverter()
+          String? digitalId,
       @JsonKey(name: 'title')
           String? title,
       @JsonKey(name: 'modified')
@@ -182,7 +185,7 @@ class __$$_MarvelComicCopyWithImpl<$Res> extends _$MarvelComicCopyWithImpl<$Res>
       digitalId: digitalId == freezed
           ? _value.digitalId
           : digitalId // ignore: cast_nullable_to_non_nullable
-              as int?,
+              as String?,
       title: title == freezed
           ? _value.title
           : title // ignore: cast_nullable_to_non_nullable
@@ -214,6 +217,7 @@ class _$_MarvelComic implements _MarvelComic {
       {@IntToStringConverter()
           required this.id,
       @JsonKey(name: 'digitalId')
+      @NullableIntToNullableStringConverter()
           this.digitalId,
       @JsonKey(name: 'title')
           this.title,
@@ -235,7 +239,8 @@ class _$_MarvelComic implements _MarvelComic {
   final String id;
   @override
   @JsonKey(name: 'digitalId')
-  final int? digitalId;
+  @NullableIntToNullableStringConverter()
+  final String? digitalId;
   @override
   @JsonKey(name: 'title')
   final String? title;
@@ -303,7 +308,8 @@ abstract class _MarvelComic implements MarvelComic {
       {@IntToStringConverter()
           required final String id,
       @JsonKey(name: 'digitalId')
-          final int? digitalId,
+      @NullableIntToNullableStringConverter()
+          final String? digitalId,
       @JsonKey(name: 'title')
           final String? title,
       @JsonKey(name: 'modified')
@@ -323,7 +329,8 @@ abstract class _MarvelComic implements MarvelComic {
   String get id => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'digitalId')
-  int? get digitalId => throw _privateConstructorUsedError;
+  @NullableIntToNullableStringConverter()
+  String? get digitalId => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'title')
   String? get title => throw _privateConstructorUsedError;
