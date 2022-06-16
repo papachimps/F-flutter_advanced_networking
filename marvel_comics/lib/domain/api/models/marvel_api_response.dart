@@ -1,0 +1,25 @@
+import 'package:json_annotation/json_annotation.dart';
+
+part 'marvel_api_response.g.dart';
+
+@JsonSerializable(constructor: '_', genericArgumentFactories: true)
+class MarvelApiResponse<T> {
+  const MarvelApiResponse._({
+    required this.code,
+    required this.status,
+    required this.data,
+  });
+
+  factory MarvelApiResponse.fromJson(
+    Map<String, dynamic> json,
+    T Function(Object? json) fromJsonT,
+  ) =>
+      _$MarvelApiResponseFromJson(json, fromJsonT);
+
+  @JsonKey(name: 'code')
+  final int code;
+  @JsonKey(name: 'status')
+  final int status;
+  @JsonKey(name: 'data')
+  final int data;
+}
