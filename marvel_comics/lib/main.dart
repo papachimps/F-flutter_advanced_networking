@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
+// import 'package:marvel_comics/domain/api/dio/certificates/certificates_management.dart';
 
-void main() {
+Future<void> main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  // await createMarvelApiCertificate();
   runApp(const MarvelComicsApp());
 }
 

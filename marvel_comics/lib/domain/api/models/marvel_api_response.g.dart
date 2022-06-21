@@ -12,8 +12,8 @@ MarvelApiResponse<T> _$MarvelApiResponseFromJson<T>(
 ) =>
     MarvelApiResponse<T>._(
       code: json['code'] as int,
-      status: json['status'] as int,
-      data: json['data'] as int,
+      status: json['status'] as String,
+      data: fromJsonT(json['data']),
     );
 
 Map<String, dynamic> _$MarvelApiResponseToJson<T>(
@@ -23,5 +23,5 @@ Map<String, dynamic> _$MarvelApiResponseToJson<T>(
     <String, dynamic>{
       'code': instance.code,
       'status': instance.status,
-      'data': instance.data,
+      'data': toJsonT(instance.data),
     };

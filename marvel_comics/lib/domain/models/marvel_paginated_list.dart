@@ -32,5 +32,5 @@ class MarvelPaginatedList<T> {
   final int count;
 
   @JsonKey(name: 'results')
-  final int results;
+  final List<T> results;
 }

@@ -2,6 +2,8 @@
 
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:marvel_comics/domain/api/converters/int_to_string_converter.dart';
+import 'package:marvel_comics/domain/models/marvel_creator_list.dart';
+import 'package:marvel_comics/domain/models/marvel_story_list.dart';
 
 import 'marvel_comic_format.dart';
 import 'marvel_image.dart';
@@ -24,6 +26,12 @@ class MarvelComic with _$MarvelComic {
         MarvelComicFormat? format,
     @JsonKey(name: 'replaced_thumbnail_key_name') MarvelImage? thumbnail,
     @JsonKey(name: 'images') @Default(<MarvelImage>[]) List<MarvelImage> images,
+    @JsonKey(name: 'stories')
+    @Default(MarvelStoryList())
+        MarvelStoryList stories,
+    @JsonKey(name: 'creators')
+    @Default(MarvelCreatorList())
+        MarvelCreatorList creators,
   }) = _MarvelComic;
 
   factory MarvelComic.fromJson(Map<String, dynamic> json) =>

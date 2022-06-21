@@ -15,7 +15,7 @@ MarvelPaginatedList<T> _$MarvelPaginatedListFromJson<T>(
       limit: json['limit'] as int,
       total: json['total'] as int,
       count: json['count'] as int,
-      results: json['results'] as int,
+      results: (json['results'] as List<dynamic>).map(fromJsonT).toList(),
     );
 
 Map<String, dynamic> _$MarvelPaginatedListToJson<T>(
@@ -27,5 +27,5 @@ Map<String, dynamic> _$MarvelPaginatedListToJson<T>(
       'limit': instance.limit,
       'total': instance.total,
       'count': instance.count,
-      'results': instance.results,
+      'results': instance.results.map(toJsonT).toList(),
     };
